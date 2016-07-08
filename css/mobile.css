@@ -1,0 +1,100 @@
+@charset"utf-8";
+
+@media screen and (max-width: 640px){
+    /******************header*****************/
+
+    /******************content*****************/
+    .content{
+        width: 100px;
+        height: 100px;
+        border: 1px solid red;
+        /*background-color: red;*/
+        position: relative;
+        top:-64px;
+        left:340px;
+    }
+    .content .line1{
+        width: 50px;
+        height: 1px;
+        /*color: aquamarine;*/
+        background-color: darkcyan;
+        position: absolute;
+        left: 150px;
+        top:300px;
+        /*-webkit-transform: rotate(22deg);*/
+    }
+    .content .line2{
+        width: 100px;
+        height: 1px;
+        /*color: aquamarine;*/
+        background-color: darkcyan;
+        position: absolute;
+        left: 175px;/*175*/
+        top:343.3px;
+        -webkit-transform: rotate(60deg);
+    }
+    .content .line3{
+        width: 100px;
+        height: 1px;
+        /*color: aquamarine;*/
+        background-color: darkcyan;
+        position: absolute;
+        left: 225px;
+        top:343.3px;
+        -webkit-transform: rotate(-60deg);
+    }
+    .content .line4{
+        width: 50px;
+        height: 1px;
+        /*color: aquamarine;*/
+        background-color: darkcyan;
+        position: absolute;
+        left: 300px;
+        top:300px;
+        /*-webkit-transform: rotate(22deg);*/
+    }
+
+    .content .line5{
+        width: 100px;
+        height: 1px;
+        /*color: aquamarine;*/
+        background-color: darkcyan;
+        position: absolute;
+        left: 325px;/*375*/
+        top:343.3px;
+        -webkit-transform: rotate(60deg);
+    }
+    .content .line6{
+        width: 212.13px;
+        height: 1px;
+        /*color: aquamarine;*/
+        background-color: darkcyan;
+        position: absolute;
+        left: 218.9px;/*280*/
+        top:461.6px;
+        -webkit-transform: rotate(-45deg);
+    }
+    .content .line7{
+        width:  212.13px;
+        height: 1px;
+        /*color: aquamarine;*/
+        background-color: darkcyan;
+        position: absolute;
+        left: 68.9px;/*280*/
+        top:461.6px;
+        -webkit-transform: rotate(45deg);
+    }
+    .content .line8{
+        width: 100px;
+        height: 1px;
+        /*color: aquamarine;*/
+        background-color: darkcyan;
+        position: absolute;
+        left: 75px;/*375*/
+        top:343.3px;
+        -webkit-transform: rotate(-60deg);
+    }
+
+
+    /******************footer*****************/
+}
