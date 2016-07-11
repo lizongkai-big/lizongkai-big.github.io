@@ -1,17 +1,24 @@
 @charset"utf-8";
 
 @media screen and (max-width: 640px){
+    *{
+        -webkit-transition: all 1s;
+    }
+    *:hover .content{
+        /*放大*/
+        -webkit-transform: scale(1.1, 1.1);
+    }
     /******************header*****************/
 
     /******************content*****************/
     .content{
-        width: 100px;
-        height: 100px;
+        width: 1px;
+        height: 1px;
         border: 1px solid red;
         /*background-color: red;*/
         position: relative;
-        top:-64px;
-        left:340px;
+        top:103.4px;
+        left:93px;
     }
     .content .line1{
         width: 50px;
