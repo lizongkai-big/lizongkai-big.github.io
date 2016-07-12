@@ -2,33 +2,106 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hello,Dem</title>
-    <!--引入样式 -->
-    <link rel="stylesheet" href="../css/main.css">
+    <title></title>
+    <script>
+        //绘制直线
+        function drawLine(){
+//            1.获取画布
+            var can = document.getElementById("can");
+//            2.获取画布的上下文
+            var context = can.getContext("2d");//大写行吗？不行
+
+            context.strokeStyle="cornflowerblue";
+//            3.设置开始位置
+            context.moveTo(50,50);
+//            4.设置结束位置
+            context.lineTo(50,100);
+
+            context.lineTo(100,100);
+            context.lineTo(100,50);
+            context.lineTo(50,50);
+
+//            5.开始划线
+            context.stroke();
+
+        }
+        function drawRect(){
+//            1.获取画布
+            var can = document.getElementById("can");
+//            2.获取画布的上下文
+            var context = can.getContext("2d");//大写行吗？不行
+
+            context.fillStyle= "red";
+//            context.strokeRect(50,50,300,300);
+            context.fillRect(50,50,300,300);
+            context.fillStyle= "white";
+            context.fillRect(54,54,292,292);
+            context.strokeStyle="red";
+            context.lineWidth = 4;
+            context.moveTo(200,50);
+            context.lineTo(200,350);
+            context.moveTo(50,200);
+            context.lineTo(350,200);
+            context.moveTo(50,350);
+            context.lineTo(350,50);
+            context.moveTo(50,50);
+            context.lineTo(350,350);
+            context.stroke();
+        }
+        function drawCircle(){
+            //            1.获取画布
+            var can = document.getElementById("can");
+//            2.获取画布的上下文
+            var context = can.getContext("2d");//大写行吗？不行
+//false 顺时针
+            context.arc(100,100,50,0,Math.PI ,false);
+
+            context.arc(400,100,50,0,Math.PI*0.9,false);
+            context.stroke();
+        }
+//        鼠标划线
+//        绑定鼠标事件
+        var canvas;
+        var context;
+        var isCan = 0;
+        window.onload=function(){
+//            1.获取画布
+            canvas = document.getElementById("can");
+//            2.获取画布的上下文
+            context = can.getContext("2d");
+//            绑定点击事件
+            canvas.onmousedown=ready;
+            canvas.onmousemove=draw;
+            canvas.onmouseout=endDraw;
+            canvas.onmouseup=endDraw;
+        }
+//        开始绘制
+        function ready(e){
+//            context.moveTo(e.left, e.top);
+//            将画笔移到鼠标位置
+            context.moveTo(e.pageX, e.pageY);
+            context.strokeStyle="darkcyan";
+            isCan = 1;
+        }
+        //        准备绘制
+        function draw(e){
+            if(isCan == 1){
+                context.lineTo(e.pageX, e.pageY);
+                context.stroke();
+            }
+        }
+
+        //        结束绘制
+        function endDraw(e){
+            isCan = 0;
+        }
+    </script>
 </head>
 <body>
-<!--头部-->
-<header></header>
-
-
-<!--内容-->
-<div class="content">
-    <div class="line1"></div>
-    <div class="line2"></div>
-    <div class="line3"></div>
-    <div class="line4"></div>
-    <div class="line5"></div>
-    <div class="line6"></div>
-    <div class="line7"></div>
-    <div class="line8"></div>
-</div>
-
-
-
-
-
-<!--尾部-->
-<footer></footer>
-
+<canvas id="can" width="5000px" height="500px"></canvas>
+<br>
+<input type="button" value=" 绘制直线 " onclick="drawLine()">
+<input type="button" value=" 绘制矩形 " onclick="drawRect()">
+<input type="button" value=" 绘制原型 " onclick="drawCircle()">
 </body>
 </html>
