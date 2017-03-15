@@ -5,7 +5,7 @@
     .target{
         -webkit-transition: all 1s;
     }
-    .target:hover .content{
+    *:hover .content{
         /*放大*/
         -webkit-transform: scale(1.3, 1.3);
     }
